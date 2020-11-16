@@ -1,0 +1,23 @@
+<div class="form-group">
+  <label for="firstName">First Name</label>
+  <input type="text" [(ngModel)]="user.firstName" class="form-control" id="firstName"placeholder="First Name">
+</div>
+<div class="form-group">
+  <label for="lasstName">Last Name</label>
+  <input  [(ngModel)]="user.lastName" type="text" class="form-control" id="lastName"placeholder="Last Name">
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Email address</label>
+  <input  [(ngModel)]="user.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Email address</label>
+  <input [(ngModel)]="user.age" type="number" class="form-control" id="age"  placeholder="Age">
+</div>
+<button (click)="onClickButton()" type="submit" class="btn btn-primary">Submit</button>
+
+
+<app-list-user-child  [t_users]="users" ></app-list-user-child>
+<!-- [] est le phénomène de property binding : le nom entre [] doit être une
+propriété (attribut) de la balise mère, dans ce cas pp-list-user-child -->

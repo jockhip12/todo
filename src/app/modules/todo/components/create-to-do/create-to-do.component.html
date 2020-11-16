@@ -1,0 +1,29 @@
+<form [formGroup]="todoGroup" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+  <div class="form-group">
+    <label for="text-to-do">Task To Do</label>
+    <textarea formControlName="text" class="form-control" id="text-to-do" rows="3"></textarea>
+    <span *ngIf="!(todoGroup.controls.text.valid) && ngForm.submitted" class="bg-danger"> ce champs est obligatoire </span>
+  </div>
+  
+  <div class="form-group">
+    <div class="input-group-prepend">
+      <select formControlName="id_user" class="custom-select" id="inputGroupSelect01">
+        <option *ngFor="let user of users" [value]="user.id">{{user.prenom}}</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input formControlName="completed" type="checkbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+    <label class="form-control"> Done ?</label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+  <button type="button" (click)="testMeNow()" class="btn btn-primary">test me</button>
+</form>
+
