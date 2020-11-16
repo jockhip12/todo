@@ -34,3 +34,7 @@ what I did in two hours:
  - I added only add and list features ( todo/add, todo/list)
  - I added a test shared folder ( create-test-module and test-harness )
  - I added the node backend API 
+
+PS: I used an old existing project, because I thought it will be a code game test, and because I am using my personal pc I can't install all the needed requirements in twi hours.
+
+the old project contains just an authentification page, so I wanted to benefit from this page and use the id user with the todo card.
